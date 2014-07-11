@@ -55,7 +55,7 @@ describe SignUpSpec::SignUp do
   context 'with invalid data' do
 
     it 'does not save' do
-      subject.save.should be_false
+      subject.save.should be_falsy
     end
 
     it 'does not send an email' do
@@ -75,7 +75,7 @@ describe SignUpSpec::SignUp do
 
     it 'does save' do
       subject.valid?
-      subject.save.should be_true
+      subject.save.should be_truthy
     end
 
     it 'sends the email' do

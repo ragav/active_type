@@ -43,7 +43,13 @@ module ActiveType
       true
     end
 
+    # https://github.com/rails/rails/issues/11645
+    # create_record is renamed starting 4.0.6
     def create_record(*)
+      true
+    end
+
+    def _create_record(*)
       true
     end
 
@@ -51,7 +57,13 @@ module ActiveType
       true
     end
 
+    # https://github.com/rails/rails/issues/11645
+    # create_record is renamed starting 4.0.6
     def update_record(*)
+      true
+    end
+
+    def _update_record(*)
       true
     end
 

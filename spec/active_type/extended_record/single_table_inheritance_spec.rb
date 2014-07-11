@@ -24,7 +24,7 @@ describe 'ActiveType::Record[STIModel]' do
 
     def should_save_and_load(save_as, load_as)
       record = save_as.new(:persisted_string => "string")
-      record.save.should be_true
+      record.save.should be_truthy
 
       reloaded_child = load_as.find(record.id)
       reloaded_child.persisted_string.should == "string"
@@ -46,7 +46,7 @@ describe 'ActiveType::Record[STIModel]' do
 
     it 'can load via the base class and convert to active type record' do
       record = STISpec::ExtendedChild.new(:persisted_string => "string")
-      record.save.should be_true
+      record.save.should be_truthy
 
       reloaded_child = STISpec::Child.find(record.id).becomes(STISpec::ExtendedChild)
       reloaded_child.persisted_string.should == "string"

@@ -184,7 +184,7 @@ describe ActiveType::Record do
 
     it 'persists to the database' do
       subject.persisted_string = "persisted string"
-      subject.save.should be_true
+      subject.save.should be_truthy
 
       subject.class.find(subject.id).persisted_string.should == "persisted string"
     end

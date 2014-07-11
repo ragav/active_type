@@ -36,7 +36,7 @@ describe SignInSpec::SignIn do
     end
 
     it 'does not save' do
-      subject.save.should be_false
+      subject.save.should be_falsy
     end
 
     it 'does not set the session' do
@@ -63,7 +63,7 @@ describe SignInSpec::SignIn do
     end
 
     it 'does not save' do
-      subject.save.should be_false
+      subject.save.should be_falsy
     end
 
     it 'does not set the session' do
@@ -85,7 +85,7 @@ describe SignInSpec::SignIn do
     end
 
     it 'does save' do
-      subject.save.should be_true
+      subject.save.should be_truthy
     end
 
     it 'sets the session' do

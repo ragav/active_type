@@ -4,6 +4,7 @@ $: << File.join(File.dirname(__FILE__), "/../../lib" )
 
 require 'active_record'
 require 'active_type'
+require 'rspec/collection_matchers'
 
 ActiveRecord::Base.default_timezone = :local
 

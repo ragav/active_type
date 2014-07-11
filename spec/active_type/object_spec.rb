@@ -280,7 +280,7 @@ describe ActiveType::Object do
     end
 
     it 'causes #save to return false' do
-      subject.save.should be_false
+      subject.save.should be_falsy
     end
   end
 
@@ -302,7 +302,7 @@ describe ActiveType::Object do
       it "calls #{callback}" do
         subject.should_receive("#{callback}_callback")
 
-        subject.save.should be_true
+        subject.save.should be_truthy
       end
 
     end
@@ -312,7 +312,7 @@ describe ActiveType::Object do
       it "aborts the chain when #{callback} returns false" do
         subject.stub("#{callback}_callback" => false)
 
-        subject.save.should be_false
+        subject.save.should be_falsy
       end
 
     end
